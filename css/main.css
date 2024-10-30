@@ -41,6 +41,33 @@ body{
 /* ********************************************************************* */
 
 /* ********************************************************************* */
+/*********************        Start Navbar    ****************** */
+/* ********************************************************************* */
+
+.nav-link{
+  position: relative;
+  padding-left: 0 !important;
+  padding-right: 20px !important;
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+.nav-link.active::before {
+  width: 40px;
+}
+
+/* ********************************************************************* */
+/*********************        End Navbar    ****************** */
+/* ********************************************************************* */
+
+/* ********************************************************************* */
 /*********************        Start Header     ****************** */
 /* ********************************************************************* */
 
@@ -238,74 +265,7 @@ header h2 .text-typed::after{
 /*********************        End Header    ****************** */
 /* ********************************************************************* */
 
-.nav-link{
-  position: relative;
-}
-.nav-link::after{
-  content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    width: 0;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out 0s;
-    
-}
-.nav-link:hover::after{
-    width: 100%;
-}
-.links{
-  width: 65% !important;
-  font-weight: 600;
-  font-size: 16px;
-}
-.dropdown-item{
-  transition: all 0.3s ease-in-out;
-}
-.dropdown-item:hover{
-  color: var(--main-color-two);
-}
-.dropdown-menu.show{
-  display: flex !important;
-}
-.dropdown-2-btn{
-  position: relative;
-}
-.dropdown-2{
-  position: absolute;
-  left: -120px;
-  opacity: 0;
-  top: 0;
-  padding: 15px 32px !important;
-  background-color: var(--main-color-one);
-  color: #000;
-  z-index: -1;
-  transition: all 0.2s ease-in-out;
-}
-.dropdown-2-btn:hover .dropdown-2{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 15px;
-  left: -185px;
-  opacity: 1;
 
-}
-ul li,ul li a{
-  width: 100%;
-  color: #232323;
-  font-size: 16px;
-  font-weight: 400;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-
-}
-ul li a:hover{
-  color: var(--main-color-two);
-}
 
 /* ********************************************************************* */
 /*********************        Start Aboue    ****************** */
